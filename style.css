@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Alkatra', 'Verdana';
+}
+body{
+	background-color: gold;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.wrapper{
+	width: 800px;
+	padding: 20px;
+	background-color: antiquewhite;
+	border: 1px solid brown;
+	border-radius: 8px;
+}
+.wrapper .input-field{
+	z-index: -999;
+	position: absolute;
+	opacity: 0;
+}
+.wrapper .main{
+	padding: 15px 30px 0px;
+	border: 5px double brown;
+	border-radius: 8px;
+}
+.main .typing-text-box{
+	max-height: 250px;
+	overflow: auto;
+}
+.typing-text-box::-webkit-scrollbar{
+	width: 0;
+}
+.typing-text-box p{
+	font-size: 25px;
+	text-align: justify;
+	letter-spacing: 1px;
+}
+.typing-text-box p span{
+	position: relative;
+}
+.typing-text-box p span.correct{
+	color: gold;
+}
+.typing-text-box p span.incorrect{
+	color: red;
+	background-color: orange;
+	border-radius: 3px;
+}
+.typing-text-box p span.active{
+	color: olive;
+}
+.typing-text-box p span.active::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: lime;
+	opacity: 0;
+	animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+	50%{
+		opacity: 1;
+	}
+}
+.main .result-box{
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 35px;
+	padding: 20px 0;
+	border-top: 4px double brown;
+}
+.result-box .result-details{
+	display: flex;
+	justify-content: space-between;
+	width: 79%;
+}
+.result-details li{
+	height: 40px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+.result-details li:not(:first-child){
+	border-left: 1px solid brown;
+	padding-left: 35px;
+}
+.result-details li span{
+	display: block;
+}
+.result-box button{
+	width: 100px;
+	border: 2px solid brown;
+	border-radius: 6px;
+	padding: 8px;
+	background-color: gold;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.5s ease;
+}
+.result-box button:hover{
+	transform: scale(1.1);
+}
+.result-box button:active{
+	transform: scale(0.7);
+}
