@@ -1,0 +1,1 @@
+# Typing-SpeedTest-Game - This is a practical tool which can be used as a game to test someone's typing speed, on the basis of typing accuracy and words typed per minute (WPM) calculations. Built this from scratch using HTML, CSS and JavaScript. Happy learning!
